@@ -40,13 +40,13 @@ module load apptainer
 Then run (for a system with FUSE)
 
 ```
-apptainer build dafoam_pyoptsparse_snopt.sif dafoam_pyoptsparse_snopt.def
+apptainer build dafoam_pyoptsparse_snopt.sif dafoam_pyoptsparse_pysnopt.def
 ```
 
 or without FUSE create a sandbox:
 
 ```
-apptainer build --sandbox dafoam_pyoptsparse_snopt_sandbox dafoam_pyoptsparse_snopt.def
+apptainer build --sandbox dafoam_pyoptsparse_snopt_sandbox dafoam_pyoptsparse_pysnopt.def
 ```
 
 in the command line. The apptainer definition expects to find in the working directory:
