@@ -82,7 +82,7 @@ python mpirun -np 4 sample_run.py
 
 An slurm submission script to run the an example `sample_script.py` is [`slurm_submit_script.sh`](
   https://github.com/connorourke/dafoam_pysnopt_apptainer/blob/main/slurm_submit_script.sh
-)[included]:
+) included:
 
 ```
 #!/bin/bash
