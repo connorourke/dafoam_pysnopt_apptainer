@@ -68,7 +68,7 @@ apptainer exec \
 or with the sandbox:
 
 ```
-apptainer exec   --bind $PWD/../code_testing_multimesh:/workspace  --pwd /home/dafoamuser/dafoam   dafoam_pyoptsparse_snopt_sandbox bash
+apptainer exec   --bind $PWD/code_testing_multimesh:/workspace  --pwd /home/dafoamuser/dafoam   dafoam_pyoptsparse_snopt_sandbox bash
 ```
 
 
