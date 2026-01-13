@@ -25,13 +25,13 @@ Base image is public and SNOPT-free, licensed SNOPT support can be enabled local
 
 ### Apptainer Build
 
-The Apptainer definition file used to enable SNOPT on HPC systems:
+The Apptainer definition file used to enable SNOPT on HPC systems builds on the original DAFoam image:
 
 - [`dafoam_pyoptsparse_snopt.def`](
   https://github.com/connorourke/dafoam_pysnopt_apptainer/blob/main/dafoam_pyoptsparse_snopt.def
 )
 
-To rebuild the image with pySNOPT enabled first ensure apptainer is installed and loaded, e.g.:
+To build the image with pySNOPT enabled first ensure apptainer is installed and loaded, e.g.:
 
 ```
 module load apptainer
@@ -56,7 +56,7 @@ pySNOPT/
 └── source/
 ```
 
-To run the container interactively with a local simulation folder (`code_testing_multimesh`) bind mounted (from an image created with FUSE):
+To run the container interactively with a local simulation folder in the cwd (e.g `code_testing_multimesh`) bind mounted (from an image created with FUSE):
 
 ```
 apptainer exec \
