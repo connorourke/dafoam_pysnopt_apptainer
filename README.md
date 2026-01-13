@@ -76,6 +76,7 @@ Inside the container:
 
 ```
 cd /workspace
+. /home/dafoamuser/dafoam/loadDAFoam.sh
 python mpirun -np 4 sample_run.py
 ```
 
