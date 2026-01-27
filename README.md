@@ -7,6 +7,9 @@ This repository provides definitions and instructions on setting up a containeri
 * DAFOAM from dafoam/opt-packages:v3.1.2
 * pyoptsparse v2.9.1
 * Optional support for SNOPT (licensed, not distributed)
+* Optional building of DAFOAM (custom source)
+* Optional building of ADR and ADF solvers
+* Optionally building only the **incompressible** solvers, or the full suite
 
 ### Dockerhub
 
@@ -30,6 +33,17 @@ The Apptainer definition file used to enable SNOPT on HPC systems builds on the 
 - [`dafoam_pyoptsparse_snopt.def`](
   https://github.com/connorourke/dafoam_pysnopt_apptainer/blob/main/dafoam_pyoptsparse_snopt.def
 )
+
+There are several environment variables that control the build:
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `BUILD_DAFOAM` | `1` | Whether to build DAFOAM from the custom source. `0` to skip. |
+| `BUILD_ADR` | `1` | Whether to build ADR solver variant (`OpenFOAM-v1812-ADR`). |
+| `BUILD_ADF` | `1` | Whether to build ADF solver variant (`OpenFOAM-v1812-ADF`). |
+| `BUILD_INCOMPRESSIBLE_ONLY` | `1` | Build only the incompressible solvers if `1`. If `0`, builds full DAFOAM. |
+| `DAFOAM_HOST_SRC` | `./dafoam_custom` | Path on the host to your custom DAFOAM source. Only used if `BUILD_DAFOAM=1`. |
+---
+
 
 To build the image with pySNOPT enabled first ensure apptainer is installed and loaded, e.g.:
 
