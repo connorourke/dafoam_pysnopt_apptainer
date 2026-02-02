@@ -91,7 +91,7 @@ Inside the container:
 ```
 cd /workspace
 . /home/dafoamuser/dafoam/loadDAFoam.sh
-python mpirun -np 4 sample_run.py
+mpirun -np 4 python sample_run.py
 ```
 
 An slurm submission script to run the an example `sample_script.py` is [`slurm_submit_script.sh`](
